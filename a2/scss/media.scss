@@ -1,0 +1,22 @@
+$smlMax: 20em;
+$medMin: 20.1em;
+$medMax: 40em;
+$lrgMin: 40.1em;
+
+@mixin size($size) {
+    @if $size == small {
+        @media screen and (max-width: $smlMax) {
+            @content;
+        }
+    }
+    @else if $size == medium {
+        @media screen and (min-width: $medMin) and (max-width: $medMax) {
+            @content;
+        }
+    }
+    @else if $size == large {
+        @media screen and (min-width: $lrgMin) {
+            @content;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+@import 'bourbon/bourbon';
+@import 'media';
+//@import 'grid';
+
+
+$pink: #FFCCCB;
+$tan: #FFD197;
+$brown: #7F3D17;
+$maroon: #7F1917;
+$blue: #CBFFFA;
+$teal: #21B6A8;
+
+
+body{
+    @include size(small) {
+        @include columns(1);
+        background-color: $blue;
+    }
+    @include size(medium) {
+        @include columns(2);
+    }
+    @include size(large) {
+        @include columns(4);
+        background-color: $tan;
+    }
+}
